@@ -3,18 +3,19 @@
 
 ![nanoGPT](assets/swiftGPT.png)
 
-This repository is a fork of Andrej Karpathy's [nanoGPT](https://github.com/karpathy/nanoGPT) that is trained on Taylor Swift lyrics.
+This repository is a fork of Andrej Karpathy's [nanoGPT](https://github.com/karpathy/nanoGPT) trained on Taylor Swift lyrics. It's purpose is to get myself familiar with the building blocks of GPTs.
 
 ## overview
 
-|model|swiftGPT|
-|----|----|
-|number of parameters|10.65M|
+|model|swiftGPT-stoi|swiftGPT-bpe|<span style="white-space:nowrap;">swiftGPT-2</span>|
+|----|----|----|----|
+|characteristics|character-level nanoGPT|nanoGPT using the OpenAI BPE tokenizer|GPT-2 finetuned
+|number of parameters|10.65M|tbd|tbd|
 |layers|6|
 |heads|6|
 |embedding size|384|
 |tokenizer|string to index|
-|training data|txt file containing all of TS lyrics|
+|training data||txt file containing all of TS lyrics| |
 
 ## install
 
@@ -99,6 +100,10 @@ $ python sample.py --out_dir=out-shakespeare-char
 
 ## todos
 
-- Try different techniques to prevent overfitting (regularization, model simplification, hyperparameter tuning)
+- Try different techniques to prevent overfitting 
+- Use OpenAI BPE tokenizer instead of string to index
 - Finetune a pretrained GPT-2 model to TS lyrics
 
+##
+
+Note: The original Readme can be seen [here](https://github.com/karpathy/nanoGPT/blob/master/README.md)
