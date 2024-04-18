@@ -36,7 +36,7 @@ Dependencies:
 Training a character-level GPT on the works of Taylor Swift. First, we download all of Taylor Swift's lyrics in a single (0.3MB) file and turn it from raw text into one large stream of integers:
 
 ```
-python data/shakespeare_char/prepare.py
+python data/swift_char/prepare.py
 ```
 
 This creates a `train.bin` and `val.bin` in that data directory. Now it is time to train the GPT. The size of it very much depends on the computational resources of your system:
@@ -45,19 +45,19 @@ This creates a `train.bin` and `val.bin` in that data directory. Now it is time 
 The default GPT has a context size of up to 256 characters, 384 feature channels, and it is a 6-layer Transformer with 6 heads in each layer. On a M1 MacBook Pro the training takes about 10 min and the best validation loss is 1.5685. For longer training times the validation loss increases while the training loss decreases, indicating overfitting.
 
 ```
-python train.py config/train_shakespeare_char.py --device=mps --compile=False --max_iters=500
+python train.py config/train_swift_char.py --device=mps --compile=False --max_iters=500
 ```
 
 A simpler train run could look as follows, taking around 25 sec.
 
 ```
-python train.py config/train_shakespeare_char.py --device=mps --compile=False --eval_iters=20 --log_interval=1 --block_size=64 --batch_size=12 --n_layer=4 --n_head=4 --n_embd=128 --max_iters=500 --lr_decay_iters=2000 --dropout=0.0
+python train.py config/train_swift_char.py --device=mps --compile=False --eval_iters=20 --log_interval=1 --block_size=64 --batch_size=12 --n_layer=4 --n_head=4 --n_embd=128 --max_iters=500 --lr_decay_iters=2000 --dropout=0.0
 ```
 
 To gernerate an output, use:
 
 ```
-python sample.py --out_dir=out-shakespeare-char --device=mps
+python sample.py --out_dir=out-swift-char --device=mps
 ```
 
 The model generates samples like this:
@@ -81,7 +81,6 @@ Now I could be tell be ol yoah
 Welcome bright wearing so to N
 ```
 
-Not bad for a character-level model after 3 minutes of training on a home computer.
 Note: In case you don't use a Apple Silicon Mac, you have to set `--device=cpu`.
 
 
