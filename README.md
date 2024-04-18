@@ -15,7 +15,7 @@ This repository is a fork of Andrej Karpathy's [nanoGPT](https://github.com/karp
 |heads|6|
 |embedding size|384|
 |tokenizer|string to index|
-|training data||txt file containing all of TS lyrics| |
+|training data|txt file containing all of TS lyrics|
 
 ## install
 
