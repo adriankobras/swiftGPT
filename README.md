@@ -88,13 +88,13 @@ Note: In case you don't use a Apple Silicon Mac, you have to set `--device=cpu`.
 In case you have a GPU, you can simply train the model with:
 
 ```
-$ python train.py config/train_shakespeare_char.py
+$ python train.py config/train_swift_char.py
 ```
 
 And generate outputs by:
 
 ```
-$ python sample.py --out_dir=out-shakespeare-char
+$ python sample.py --out_dir=out-swift-char
 ```
 
 ## todos
