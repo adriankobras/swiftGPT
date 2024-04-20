@@ -7,10 +7,10 @@ This repository is a fork of Andrej Karpathy's [nanoGPT](https://github.com/karp
 
 ## overview
 
-|model|swiftGPT-stoi|swiftGPT-bpe|<span style="white-space:nowrap;">swiftGPT-2</span>|
-|----|----|----|----|
-|characteristics|character-level nanoGPT|nanoGPT using the OpenAI BPE tokenizer|GPT-2 finetuned
-|number of parameters|10.65M|29.94M|tbd|
+|model|swiftGPT-nano-stoi|swiftGPT-nano-bpe|swiftGPT-2-f|swiftGPT-2-LoRA|swiftGPT-2-SP|
+|----|----|----|----|----|----|
+|characteristics|character-level nanoGPT|nanoGPT using the OpenAI BPE tokenizer|GPT-2 finetuned|GPT-2 finetuned using Low-Rank Adaptation (LoRA)|GPT-2 finetuned using Soft Prompts|
+|number of parameters|10.65M|29.94M|tbd|tbd|tbd|
 |layers|6|6|
 |heads|6|6|
 |embedding size|384|384|
@@ -99,9 +99,8 @@ $ python sample.py --out_dir=out-swift-char
 
 ## todos
 
-- Try different techniques to prevent overfitting 
-- Use OpenAI BPE tokenizer instead of string to index
 - Finetune a pretrained GPT-2 model to TS lyrics
+- Try parameter efficient fine tuning methods and compare results
 
 ##
 
