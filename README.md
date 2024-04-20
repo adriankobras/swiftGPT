@@ -10,12 +10,12 @@ This repository is a fork of Andrej Karpathy's [nanoGPT](https://github.com/karp
 |model|swiftGPT-stoi|swiftGPT-bpe|<span style="white-space:nowrap;">swiftGPT-2</span>|
 |----|----|----|----|
 |characteristics|character-level nanoGPT|nanoGPT using the OpenAI BPE tokenizer|GPT-2 finetuned
-|number of parameters|10.65M|tbd|tbd|
-|layers|6|
-|heads|6|
-|embedding size|384|
-|tokenizer|string to index|
-|training data|txt file containing all of TS lyrics|
+|number of parameters|10.65M|29.94M|tbd|
+|layers|6|6|
+|heads|6|6|
+|embedding size|384|384|
+|tokenizer|string to index|BPE|
+|training data|txt file containing all of TS lyrics|txt file containing all of TS lyrics|
 
 ## install
 
