@@ -103,7 +103,7 @@ $ python sample.py --out_dir=out-swift-char
 In order to train the different models from the table above, you can adjust the training as follows. Instead of `config/train_swift_char.py`, use `config/train_swift.py` to train **swiftGPT-nano-bpe** and `config/finetune_swift.py` to tain **swiftGPT-2-f**. 
 To generate outputs you have to change `--out_dir=out-swift-char` to `--out_dir=out-swift` for both, **swiftGPT-nano-bpe** and **swiftGPT-2-f**.
 
-## output comparison
+## example outputs
 
 **swiftGPT-nano-stoi**:
 ```
@@ -126,6 +126,28 @@ Welcome bright wearing so to N
 ```
 
 **swiftGPT-nano-bpe**:
+```
+And I'm dancing
+'Cause I feel so sweet sorrow
+You weren't take one of a deep breath out about him
+And Im not what a new soundtrack
+When we're not not out of starlight
+But I just a new romantics
+And I want is you never let me
+'Cause I kinda record that's watching to New York
+
+Say that way
+You and our heart so much
+
+So I wished on a daydream
+
+Uh baby, you would be a small town
+I wished on a crowded game
+Oh, I am not so the same old little while you're doing afraid to ask me with a mess
+It was screaming and daddy's just for pictures just for a ruthless game
+It's been a state of line
+And I'm spinning around
+```
 
 **swiftGPT-2-f**:
 ```
@@ -143,7 +165,6 @@ But the very thing it speaks is the very thing itself.
 
 ## todos
 
-- Finetune a pretrained GPT-2 model to TS lyrics
 - Try parameter efficient fine tuning methods and compare results
 
 ##
