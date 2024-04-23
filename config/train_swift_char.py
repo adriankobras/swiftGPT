@@ -1,4 +1,4 @@
-# train a miniature character-level shakespeare model
+# train a miniature character-level model
 # good for debugging and playing on macbooks and such
 
 out_dir = 'out-swift-char'
