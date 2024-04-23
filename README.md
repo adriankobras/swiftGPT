@@ -3,7 +3,7 @@
 
 ![nanoGPT](assets/swiftGPT.png)
 
-This repository is a fork of Andrej Karpathy's [nanoGPT](https://github.com/karpathy/nanoGPT) trained on Taylor Swift lyrics. It's purpose is to get myself familiar with the building blocks of GPTs.
+This repository is a fork of Andrej Karpathy's [nanoGPT](https://github.com/karpathy/nanoGPT) trained on Taylor Swift lyrics. It's purpose is to get myself familiar with the building blocks of GPTs. Two of the models (nanoGPT) are trained from scratch while the others are finetuned versions of GPT-2.
 
 ## overview
 
