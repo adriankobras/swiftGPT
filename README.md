@@ -10,12 +10,14 @@ This repository is a fork of Andrej Karpathy's [nanoGPT](https://github.com/karp
 |model|swiftGPT-nano-stoi|swiftGPT-nano-bpe|swiftGPT-2-f|swiftGPT-2-LoRA|swiftGPT-2-SP|
 |----|----|----|----|----|----|
 |characteristics|character-level nanoGPT|nanoGPT using the OpenAI BPE tokenizer|GPT-2 finetuned|GPT-2 finetuned using Low-Rank Adaptation (LoRA)|GPT-2 finetuned using Soft Prompts|
-|number of parameters|10.65M|29.94M|tbd|tbd|tbd|
-|layers|6|6|
-|heads|6|6|
-|embedding size|384|384|
-|tokenizer|string to index|BPE|
-|training data|txt file containing all of TS lyrics|txt file containing all of TS lyrics|
+|number of parameters|10.65M|29.94M|123.65M|tbd|tbd|
+|layers|6|6|12|
+|heads|6|6|12|
+|embedding size|384|384|768|
+|block size|256|256|1024|
+|vocab size|80|50304|50304|
+|tokenizer|string to index|BPE|BPE|
+|training data|txt file containing all of TS lyrics|txt file containing all of TS lyrics|txt file containing all of TS lyrics|
 
 ## install
 
@@ -27,6 +29,7 @@ Dependencies:
 
 - [pytorch](https://pytorch.org)
 - [numpy](https://numpy.org/install/)
+-  `transformers` for huggingface transformers (to load GPT-2 checkpoints)
 -  `tiktoken` for OpenAI's fast BPE code
 -  `wandb` for optional logging
 -  `tqdm` for progress bars
@@ -96,6 +99,37 @@ And generate outputs by:
 ```
 $ python sample.py --out_dir=out-swift-char
 ```
+
+In order to train the different models from the table above, you can adjust the training as follows. Instead of `config/train_swift_char.py` use `config/train_swift.py` to train **swiftGPT-nano-bpe** and `config/finetune_swift.py` to tain **swiftGPT-2-f**. 
+To generate outputs you have to change `--out_dir=out-swift-char` to `--out_dir=out-swift` for both **swiftGPT-nano-bpe** and **swiftGPT-2-f**.
+
+## output comparison
+
+**swiftGPT-nano-stoi**:
+```
+And I don't fen heart a hagn stroe
+I bet you want to go
+
+'Cause I know it care yoeher here
+
+[Chorus]
+It's just just wasn't know what yoe wasn't mething
+We don't know we grow up uperfactly writt of twing?
+I see back togs plane somethink to fly, start sneak what it to secome back to me?
+
+And me come back to New Yorh YorKeep to me deep crawere like does
+And I can got a back to time all new
+Let you spicting to December throom and tearler
+
+Now I could be tell be ol yoah
+Welcome bright wearing so to N
+```
+
+**swiftGPT-nano-bpe**:
+
+**swiftGPT-2-f**:
+
+
 
 ## todos
 
