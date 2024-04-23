@@ -1,7 +1,4 @@
-
-# tiny shakespeare
-
-Tiny shakespeare, of the good old char-rnn fame :)
+# swift lyrics, word-level
 
 After running `prepare.py`:
 
