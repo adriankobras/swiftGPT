@@ -22,7 +22,7 @@ This repository is a fork of Andrej Karpathy's [nanoGPT](https://github.com/karp
 ## install
 
 ```
-pip install torch numpy tiktoken wandb tqdm
+pip install torch numpy transformers tiktoken wandb tqdm
 ```
 
 Dependencies:
@@ -100,8 +100,8 @@ And generate outputs by:
 $ python sample.py --out_dir=out-swift-char
 ```
 
-In order to train the different models from the table above, you can adjust the training as follows. Instead of `config/train_swift_char.py` use `config/train_swift.py` to train **swiftGPT-nano-bpe** and `config/finetune_swift.py` to tain **swiftGPT-2-f**. 
-To generate outputs you have to change `--out_dir=out-swift-char` to `--out_dir=out-swift` for both **swiftGPT-nano-bpe** and **swiftGPT-2-f**.
+In order to train the different models from the table above, you can adjust the training as follows. Instead of `config/train_swift_char.py`, use `config/train_swift.py` to train **swiftGPT-nano-bpe** and `config/finetune_swift.py` to tain **swiftGPT-2-f**. 
+To generate outputs you have to change `--out_dir=out-swift-char` to `--out_dir=out-swift` for both, **swiftGPT-nano-bpe** and **swiftGPT-2-f**.
 
 ## output comparison
 
@@ -128,6 +128,16 @@ Welcome bright wearing so to N
 **swiftGPT-nano-bpe**:
 
 **swiftGPT-2-f**:
+```
+And these days I will be able to write:
+
+My lips are like a man that sleeps on a couch,
+For he that is tired has a pillow of pillow;
+And when he is tired he will look down while
+The word is spoken on him, and he will hear it,
+Because this word is not present in the world,
+But the very thing it speaks is the very thing itself.
+```
 
 
 
