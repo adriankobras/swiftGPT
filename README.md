@@ -7,10 +7,10 @@ This repository is a fork of Andrej Karpathy's [nanoGPT](https://github.com/karp
 
 ## overview
 
-|model|swiftGPT-nano-stoi|swiftGPT-nano-bpe|swiftGPT-2-f|swiftGPT-2-LoRA|swiftGPT-2-SP|
-|----|----|----|----|----|----|
-|characteristics|character-level nanoGPT|nanoGPT using the OpenAI BPE tokenizer|GPT-2 finetuned|GPT-2 finetuned using Low-Rank Adaptation (LoRA)|GPT-2 finetuned using Soft Prompts|
-|number of parameters|10.65M|29.94M|123.65M|tbd|tbd|
+|model|swiftGPT-nano-stoi|swiftGPT-nano-bpe|swiftGPT-2-f|
+|----|----|----|----|
+|characteristics|character-level nanoGPT|nanoGPT using the OpenAI BPE tokenizer|GPT-2 finetuned|
+|number of parameters|10.65M|29.94M|123.65M|
 |layers|6|6|12|
 |heads|6|6|12|
 |embedding size|384|384|768|
@@ -86,7 +86,6 @@ Welcome bright wearing so to N
 
 Note: In case you don't use a Apple Silicon Mac, you have to set `--device=cpu`.
 
-
 **I have a GPU**: 
 In case you have a GPU, you can simply train the model with:
 
@@ -161,12 +160,6 @@ Because this word is not present in the world,
 But the very thing it speaks is the very thing itself.
 ```
 
-
-
-## todos
-
-- Try parameter efficient fine tuning methods and compare results
-
 ##
 
-Note: The original Readme can be seen [here](https://github.com/karpathy/nanoGPT/blob/master/README.md)
+Note: The original Readme can be seen [here](https://github.com/karpathy/nanoGPT/blob/master/README.md).
